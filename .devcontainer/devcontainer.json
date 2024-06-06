@@ -5,11 +5,15 @@
 	"image": "mcr.microsoft.com/devcontainers/python:3.11",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers-contrib/features/mkdocs:1": {}
+		"ghcr.io/devcontainers-contrib/features/mkdocs:2.0.9": {}
 	},
-	"extensions": [
-		"redhat.vscode-yaml"
-	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"redhat.vscode-yaml"
+			]
+		}
+	},
 	"forwardPorts": [8000],
 	// https://containers.dev/implementors/json_reference/
 	"postCreateCommand": "sudo apt-get update && sudo apt-get install --yes bash-completion",
